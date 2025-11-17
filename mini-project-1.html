@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <ul>
+            <li><a href="home.html" target="_blank">HOME</a></li>
+            <li><a href="practice.html" target="_blank">PRACTICE</a></li>
+            <li><a href="course.html" target="_blank">COURSE</a></li>
+            <li><a href="blog.html" target="_blank">BLOG</a></li>
+            <li><a href="contacts.html" target="_blank">CONTACTS</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <h1>Test login</h1>
+
+        <p class="desc">
+            This is a simple Login page. Students can use this page to practice writing simple positive
+            and negative LogIn tests. Login functionality is something that most of the test automation
+            engineers need to automate.
+        </p>
+
+        <p class="info">
+            Use next credentials to execute Login:<br>
+            Username: <strong>student</strong><br>
+            Password: <strong>Password123</strong>
+        </p>
+
+        <!-- LOGIN BOX -->
+        <div class="login-box">
+            <label>Username</label>
+            <input type="text">
+
+            <label>Password</label>
+            <input type="password">
+
+            <button>submit</button>
+        </div>
+
+        <!-- TEST CASES -->
+        <div class="testcases">
+
+            <h3>Test case 1: Positive LogIn test</h3>
+            <ol>
+                <li>Open page</li>
+                <li>Type username student into Username field</li>
+                <li>Type password Password123 into Password field</li>
+                <li>Push Submit button</li>
+                <li>Verify new page URL contains practicetestautomation.com/logged-in-successfully/</li>
+                <li>Verify new page contains expected text ('Congratulations' or 'successfully logged in')</li>
+                <li>Verify button Log out is displayed on the new page</li>
+            </ol>
+
+            <hr>
+
+            <h3>Test case 2: Negative username test</h3>
+            <ol>
+                <li>Open page</li>
+                <li>Type username incorrectUser into Username field</li>
+                <li>Type password Password123 into Password field</li>
+                <li>Push Submit button</li>
+                <li>Verify error message is displayed</li>
+                <li>Verify error message text is Your username is invalid!</li>
+            </ol>
+
+            <hr>
+
+            <h3>Test case 3: Negative password test</h3>
+            <ol>
+                <li>Open page</li>
+                <li>Type username student into Username field</li>
+                <li>Type password incorrectPassword into Password field</li>
+                <li>Push Submit button</li>
+                <li>Verify error message is displayed</li>
+                <li>Verify error message text is Your password is invalid!</li>
+            </ol>
+        </div>
+    </div>
+
+    <footer>
+        © Copyright 2020 Practice Test Automation. All rights reserved | Privacy Policy
+    </footer>
+
+</body>
+</html>
